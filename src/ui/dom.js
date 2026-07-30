@@ -28,7 +28,14 @@ export function h(tag, props = null, children = null) {
   for (const [k, v] of Object.entries(props || {})) {
     if (v === null || v === undefined || v === false) continue;
     if (k === 'class' || k === 'className') el.className = [el.className, v].filter(Boolean).join(' ');
-    else if (k === 'style' && typeof v === 'object') Object.assign(el.style, v);
+    // Custom properties have to go through setProperty — assigning them to
+    // style like a normal key does nothing at all.
+    else if (k === 'style' && typeof v === 'object') {
+      for (const [prop, val] of Object.entries(v)) {
+        if (prop.startsWith('--')) el.style.setProperty(prop, val);
+        else el.style[prop] = val;
+      }
+    }
     else if (k === 'dataset') Object.assign(el.dataset, v);
     else if (k === 'html') el.innerHTML = v;
     else if (k.startsWith('on') && typeof v === 'function') el.addEventListener(k.slice(2), v);

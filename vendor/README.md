@@ -56,3 +56,8 @@ in CJK documents rather than as an error.
 The Tesseract language models are gzipped `tessdata_fast` files. To add a
 language, drop `<code>.traineddata.gz` into `tesseract/lang/` and add it to the
 list in `src/tools/ocr.js`.
+
+`tesseract/core/` holds the two `*-lstm.wasm.js` builds — the SIMD one and the
+plain fallback, picked at runtime by feature detection. These are the variants
+with the WebAssembly embedded; the separate `.js` + `.wasm` pairs in the package
+are not what the worker asks for and will 404 if you ship those instead.

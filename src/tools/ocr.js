@@ -92,7 +92,7 @@ export default function mount(host, tool) {
       },
       {
         name: 'note', type: 'note', kind: 'warn',
-        text: 'The first run downloads the engine and the language model from this site — around 5 MB, cached afterwards. Recognition is slow: budget a few seconds per page.',
+        text: 'The first run fetches the engine and the language model from this site — about 6 MB, cached afterwards. Recognition is slow: budget a few seconds per page.',
       },
     ],
 
@@ -108,7 +108,10 @@ export default function mount(host, tool) {
       const lang = v.lang === 'eng' || !v.alsoEnglish ? v.lang : `${v.lang}+eng`;
 
       await a.progress(0.02, 'Starting the recognition engine…');
-      const { createWorker } = await import(new URL('tesseract.esm.min.js', base).href);
+      // The published ESM build re-exports the CommonJS bundle as a default.
+      const mod = await import(new URL('tesseract.esm.min.js', base).href);
+      const createWorker = mod.createWorker || mod.default?.createWorker;
+      if (typeof createWorker !== 'function') throw new Error('The recognition engine did not load correctly.');
       const worker = await createWorker(lang, 1, {
         workerPath: new URL('worker.min.js', base).href,
         corePath: new URL('core/', base).href,

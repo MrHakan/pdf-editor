@@ -1,0 +1,7 @@
+# Vendored builds are third-party artifacts, not project source.
+vendor/** linguist-vendored
+assets/fonts/** linguist-vendored
+*.woff2 binary
+*.ttf binary
+*.traineddata.gz binary
+*.wasm binary

@@ -1,0 +1,24 @@
+{
+  "name": "Quire — local PDF workshop",
+  "short_name": "Quire",
+  "description": "Merge, split, sign, redact, compress and convert PDFs entirely inside your browser. No uploads, no accounts, no server.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0C0F14",
+  "theme_color": "#0C0F14",
+  "orientation": "any",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    { "src": "./assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Merge PDFs", "url": "./#/t/merge" },
+    { "name": "Split PDF", "url": "./#/t/split" },
+    { "name": "Sign PDF", "url": "./#/t/sign" },
+    { "name": "Compress PDF", "url": "./#/t/compress" }
+  ]
+}

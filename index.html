@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="press">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quire — PDF workshop that runs on your device</title>
+<meta name="description" content="Merge, split, sign, redact, compress and convert PDFs. Every operation runs inside your browser — your files are never uploaded.">
+<meta name="theme-color" content="#0C0F14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2F1EC" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="dark light">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quire — a PDF workshop that runs on your device">
+<meta property="og:description" content="24 PDF tools. No uploads, no accounts, no server. Everything happens in your browser.">
+<meta property="og:image" content="./assets/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/icon-180.png">
+<link rel="manifest" href="./manifest.webmanifest">
+
+<link rel="preload" href="./assets/fonts/ui/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/ui/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+
+<a class="skip-link" href="#view">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="#/" aria-label="Quire, home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 3.6h9.2L19 8.4v12H5z"/><path d="M14 3.6v5h5"/><path d="M8.4 12.6h7.2M8.4 16h4.6"/></g></svg>
+      </span>
+      <span class="brand__word">Quire</span>
+      <span class="brand__tag">local pdf workshop</span>
+    </a>
+
+    <div class="topbar__spacer"></div>
+
+    <button class="btn btn--ghost btn--icon" id="btn-search" title="Search tools (press /)" aria-label="Search tools">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.2"/><path d="m15.6 15.6 3.4 3.4"/></svg>
+    </button>
+    <button class="btn btn--ghost btn--icon" id="btn-theme" title="Switch between press and stock" aria-label="Switch theme">
+      <svg class="ico-dark" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"/></svg>
+      <svg class="ico-light" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M3 12h2.2M18.8 12H21M5.6 5.6 7.2 7.2M16.8 16.8l1.6 1.6M18.4 5.6 16.8 7.2M7.2 16.8l-1.6 1.6"/></svg>
+    </button>
+    <a class="btn btn--ghost btn--icon repo-link" id="repo-link" href="https://github.com/MrHakan/pdf-editor" target="_blank" rel="noopener" title="Source code" aria-label="Source code on GitHub">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="view" class="view" tabindex="-1"></main>
+
+<footer class="footer">
+  <div class="footer__in">
+    <p class="footer__note">
+      <strong>Quire</strong> is a static page. It has no backend, no analytics and no accounts —
+      once it has loaded you can pull the plug on your network and every tool still works.
+    </p>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#/">Tools</a>
+      <a href="#/privacy">How it stays local</a>
+      <a href="#/about">About</a>
+      <a href="https://github.com/MrHakan/pdf-editor" target="_blank" rel="noopener">Source</a>
+    </nav>
+  </div>
+</footer>
+
+<div id="toaster" class="toaster" role="status" aria-live="polite"></div>
+<div id="modal-root"></div>
+
+<noscript>
+  <div class="noscript">Quire does all of its work with JavaScript in your browser. With scripting turned off there is nothing for it to run on.</div>
+</noscript>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

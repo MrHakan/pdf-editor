@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="Archivo, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#0C0F14"/>
+  <g stroke="#161C25" stroke-width="1">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
+    <path d="M100 0v630M250 0v630M400 0v630M550 0v630M700 0v630M850 0v630M1000 0v630"/>
+  </g>
+  <g stroke="#303B49" stroke-width="2" stroke-linecap="square">
+    <path d="M64 40v26M40 64h26M1136 40v26M1160 64h-26M64 590v-26M40 566h26M1136 590v-26M1160 566h-26"/>
+  </g>
+
+  <g transform="translate(88 96)">
+    <g fill="none" stroke="#22B8D6" stroke-width="4" stroke-linejoin="round">
+      <path d="M2 4h26l12 12v36H2z"/><path d="M28 4v12h12"/>
+    </g>
+    <text x="58" y="42" fill="#E7EBF1" font-size="40" font-weight="700" letter-spacing="-1">Quire</text>
+    <text x="176" y="41" fill="#626D7C" font-size="18" font-family="IBM Plex Mono, monospace" letter-spacing="3">LOCAL PDF WORKSHOP</text>
+  </g>
+
+  <text x="88" y="290" fill="#E7EBF1" font-size="84" font-weight="700" letter-spacing="-3.4">Your documents stay</text>
+  <text x="88" y="382" fill="#22B8D6" font-size="84" font-weight="700" letter-spacing="-3.4">on this machine.</text>
+
+  <text x="88" y="452" fill="#97A2B2" font-size="27">25 tools that merge, split, sign, redact and convert PDFs —</text>
+  <text x="88" y="490" fill="#97A2B2" font-size="27">entirely inside your browser. No uploads, no accounts, no server.</text>
+
+  <g transform="translate(88 536)" font-family="IBM Plex Mono, monospace" font-size="17">
+    <rect x="0" y="0" width="228" height="40" rx="5" fill="#12161D" stroke="#222A35"/>
+    <text x="16" y="26" fill="#626D7C">bytes sent</text>
+    <text x="196" y="26" fill="#3DBE8B" text-anchor="end" font-weight="600">0 B</text>
+  </g>
+</svg>

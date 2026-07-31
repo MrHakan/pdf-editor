@@ -1,5 +1,9 @@
 # Vendored libraries
 
+Nothing in this directory is covered by the project's CC0 dedication. Each file
+here belongs to whoever wrote it and keeps its own licence — see the table
+below, and the `LICENSE-*` files alongside.
+
 Quire loads no code from a CDN. Everything the tools need lives here and is
 served from the same origin as the page, which is what lets the app keep
 working with the network switched off — and what makes "nothing leaves this

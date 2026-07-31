@@ -146,5 +146,16 @@ confidential.
 
 ## Licence
 
-[MIT](LICENSE). The vendored libraries keep their own licences, listed in
-[`vendor/README.md`](vendor/README.md).
+Everything written for this project is released under
+[CC0 1.0 Universal](LICENSE) — public domain. Copy it, change it, sell it, ship
+it without credit. No attribution required.
+
+That covers the code, the design and the documentation. It cannot cover work by
+other people that ships alongside it:
+
+- the libraries in [`vendor/`](vendor/README.md) — MIT and Apache-2.0
+- the typefaces in [`assets/fonts/`](assets/fonts/README.md) — SIL Open Font
+  License 1.1
+
+Both keep their own notices, which are in those directories. Redistributing the
+site as a whole means carrying them along.
